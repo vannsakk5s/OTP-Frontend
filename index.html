@@ -4,9 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
+    <title>GateSMS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
   </head>
-  <body>
+  <body class="bg-slate-900 text-slate-50 min-h-screen flex justify-center items-center m-0 p-0 box-border">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
